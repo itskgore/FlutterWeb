@@ -9,10 +9,20 @@ class NavbarMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 80,
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Icon(Icons.menu, color: Colors.white), NavBarLogo()],
+        children: [
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            color: Colors.white,
+          ),
+          NavBarLogo()
+        ],
       ),
     );
   }

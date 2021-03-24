@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newweb/screens/test.dart';
 import 'package:newweb/widget/callAction/callAction.dart';
 import 'package:newweb/widget/courseDetails/courseDetails.dart';
 
@@ -20,8 +21,14 @@ class _HomeMobState extends State<HomeMob> {
         SizedBox(
           height: 100,
         ),
-        CallAction(
-          title: "Join Course",
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => Test()));
+          },
+          child: CallAction(
+            title: "Join Me",
+          ),
         )
       ],
     );

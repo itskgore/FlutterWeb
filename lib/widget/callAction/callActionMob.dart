@@ -12,6 +12,9 @@ class CallActionMob extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+      margin: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
       child: Text(
         title,
         style: TextStyle(

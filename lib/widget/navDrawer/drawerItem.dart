@@ -4,7 +4,9 @@ import 'package:newweb/widget/naviBar/navbarItem.dart';
 class DrawerItem extends StatelessWidget {
   final String title;
   final IconData icon;
-  const DrawerItem({Key key, this.icon, this.title}) : super(key: key);
+  final String navPath;
+  const DrawerItem({Key key, this.icon, this.title, this.navPath})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +14,16 @@ class DrawerItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 30, top: 60),
       child: Row(
         children: [
-          Icon(icon),
+          Icon(
+            icon,
+            color: Colors.white,
+          ),
           SizedBox(
             width: 20,
           ),
           NavItem(
             title: title,
+            navPath: navPath,
           )
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newweb/screens/test.dart';
 import 'package:newweb/widget/callAction/callAction.dart';
 import 'package:newweb/widget/courseDetails/courseDetails.dart';
 
@@ -12,8 +13,11 @@ class HomeDesk extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         CourseDetail(),
-        CallAction(
-          title: "Join Course",
+        GestureDetector(
+          onTap: () {},
+          child: CallAction(
+            title: "Join Me",
+          ),
         )
       ],
     );

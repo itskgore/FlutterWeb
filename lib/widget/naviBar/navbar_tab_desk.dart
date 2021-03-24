@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newweb/routing/routeNames.dart';
 import 'package:newweb/widget/naviBar/navbarItem.dart';
 import 'package:newweb/widget/naviBar/navbarLogo.dart';
 
@@ -13,6 +14,8 @@ class _NaviTabDeskState extends State<NaviTabDesk> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey[900],
+      padding: EdgeInsets.symmetric(horizontal: 10),
       height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -21,11 +24,31 @@ class _NaviTabDeskState extends State<NaviTabDesk> {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              NavItem(title: "Episodes"),
-              SizedBox(
-                width: 60,
+              NavItem(
+                title: "Home",
+                navPath: homeRoute,
               ),
-              NavItem(title: "About Us"),
+              SizedBox(
+                width: 20,
+              ),
+              NavItem(
+                title: "About Me",
+                navPath: aboutRoute,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              NavItem(
+                title: "Projects",
+                navPath: episodesRoute,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              NavItem(
+                title: "Hire Me",
+                navPath: connectUsRoute,
+              ),
               SizedBox(
                 width: 20,
               ),
